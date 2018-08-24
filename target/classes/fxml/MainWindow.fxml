@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="706.0" prefWidth="1215.0" styleClass="main-background" stylesheets="@../styles/styles.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.allchanzi.cellanalyzer.gui.controllers.MainWindowController">
+   <children>
+      <GridPane alignment="CENTER" prefHeight="706.0" prefWidth="1065.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="512.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="512.0" />
+            <ColumnConstraints hgrow="SOMETIMES" />
+            <ColumnConstraints />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="231.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="512.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <StackPane maxHeight="512.0" maxWidth="512.0" minHeight="512.0" minWidth="512.0" prefHeight="512.0" prefWidth="512.0" style="-fx-border-color: white;" GridPane.columnSpan="2" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="50.0" right="10.0" />
+               </GridPane.margin>
+               <children>
+                  <ImageView fx:id="originalImageView" fitHeight="512.0" fitWidth="512.0" pickOnBounds="true" preserveRatio="true">
+                     <StackPane.margin>
+                        <Insets />
+                     </StackPane.margin>
+                  </ImageView>
+               </children>
+            </StackPane>
+            <StackPane maxHeight="512.0" maxWidth="512.0" minHeight="512.0" minWidth="512.0" prefHeight="512.0" prefWidth="512.0" style="-fx-border-color: white;" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="1">
+               <children>
+                  <ImageView fx:id="analyzedImageView" fitHeight="512.0" fitWidth="512.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               </children>
+               <GridPane.margin>
+                  <Insets left="100.0" right="10.0" />
+               </GridPane.margin>
+            </StackPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="3">
+               <children>
+                  <HBox layoutX="68.0" layoutY="-22.0" prefHeight="100.0" prefWidth="200.0" styleClass="main-cell-counter" stylesheets="@../styles/styles.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label text="All" textAlignment="RIGHT" textFill="#fffafa">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" top="10.0" />
+                           </HBox.margin></Label>
+                        <Label text="---" textFill="#fffafa">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" right="20.0" top="10.0" />
+                           </HBox.margin></Label>
+                        <Label layoutX="38.0" layoutY="10.0" text="Colored" textFill="#fffafa">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" top="10.0" />
+                           </HBox.margin></Label>
+                        <Label layoutX="10.0" layoutY="10.0" text="---" textFill="#fffafa">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" right="20.0" top="10.0" />
+                           </HBox.margin></Label>
+                        <Label layoutX="66.0" layoutY="10.0" text="Uncolored" textFill="#fffafa">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" top="10.0" />
+                           </HBox.margin></Label>
+                        <Label layoutX="94.0" layoutY="10.0" text="---" textFill="#fffafa">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" right="20.0" top="10.0" />
+                           </HBox.margin></Label>
+                        <Label layoutX="150.0" layoutY="10.0" text="Red" textFill="#fffafa">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" top="10.0" />
+                           </HBox.margin></Label>
+                        <Label layoutX="122.0" layoutY="10.0" text="---" textFill="#fffafa">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" right="20.0" top="10.0" />
+                           </HBox.margin></Label>
+                        <Label layoutX="206.0" layoutY="10.0" text="Green" textFill="#fffafa">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" top="10.0" />
+                           </HBox.margin></Label>
+                        <Label layoutX="178.0" layoutY="10.0" text="---" textFill="#fffafa">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" right="20.0" top="10.0" />
+                           </HBox.margin></Label>
+                        <Label layoutX="234.0" layoutY="10.0" text="Yellow" textFill="#fffafa">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" top="10.0" />
+                           </HBox.margin></Label>
+                        <Label layoutX="262.0" layoutY="10.0" text="---" textFill="#fffafa">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" right="20.0" top="10.0" />
+                           </HBox.margin></Label>
+                     </children>
+                  </HBox>
+                  <ToggleButton fx:id="menuButton" mnemonicParsing="false" onAction="#menuButtonClicked" prefHeight="55.0" prefWidth="163.0" styleClass="main-menu-button" stylesheets="@../styles/styles.css" text="Menu" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <padding>
+                        <Insets bottom="1.0" />
+                     </padding></ToggleButton>
+               </children>
+            </AnchorPane>
+            <VBox fx:id="mainMenuBox" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="150.0" styleClass="main-menu" stylesheets="@../styles/styles.css" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="1" GridPane.rowSpan="2">
+               <children>
+                  <Button fx:id="loadButton" mnemonicParsing="false" onAction="#loadButtonClicked" prefHeight="100.0" prefWidth="191.0" styleClass="main-button" stylesheets="@../styles/styles.css" text="Load">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="calibrationButton" onAction="#calibrateButtonClicked" layoutX="66.0" layoutY="10.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="216.0" styleClass="main-button" stylesheets="@../styles/styles.css" text="Calibrate">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="analyzeButton" layoutX="66.0" layoutY="10.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="185.0" styleClass="main-button" stylesheets="@../styles/styles.css" text="Analyze">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="formatOutpuButton" layoutX="66.0" layoutY="35.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="245.0" styleClass="main-button" stylesheets="@../styles/styles.css" text="Format Output">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="showParamsButton" layoutX="66.0" layoutY="85.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="259.0" styleClass="main-button" stylesheets="@../styles/styles.css" text="Show Parameters">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="saveButton" layoutX="66.0" layoutY="60.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="203.0" styleClass="main-button" stylesheets="@../styles/styles.css" text="Save">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

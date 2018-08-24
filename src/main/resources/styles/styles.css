@@ -1,0 +1,58 @@
+.main-background {
+    -fx-background-color: #333333;
+}
+
+.main-menu {
+    -fx-background-color: #B3B27D;
+}
+
+.main-menu-button {
+    -fx-background-color: #456990;
+    -fx-text-fill: white;
+    -fx-font-size: 15;
+    -fx-font-weight: bold;
+}
+
+.main-menu-button:hover {
+    -fx-background-color: #f2b652, #456990;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0, 0 0 5 0;
+    -fx-text-fill: #f2b652;
+    -fx-text-alignment: center;
+}
+
+.main-menu-button:selected {
+    -fx-background-color: #f2b652, #B3B27D;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0, 0 0 0 5;
+    -fx-text-fill: White;
+    -fx-text-alignment: center;
+}
+
+.main-button {
+    -fx-background-color: #B3B27D;
+    -fx-background-radius: 0;
+    -fx-text-alignment: center;
+    -fx-text-fill: White;
+    -fx-font-size: 15;
+    -fx-font-weight: bold;
+    -fx-opacity: 0.8;
+
+}
+
+.main-button:hover {
+    -fx-background-color: #f2b652, #B3B27D;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0, 0 0 0 5;
+    -fx-text-fill: #f2b652;
+    -fx-text-alignment: center;
+}
+
+.main-cell-counter {
+    -fx-background-color: #456990;
+
+}
+
+.main-cell-counter-labels {
+    -fx-font-size: 25;
+}
